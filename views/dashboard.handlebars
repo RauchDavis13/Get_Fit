@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <section class="post user image">
   <h3 class="meta input-color">Hello {{user.username}}!<br>What Exercise are you doing?</h3>
 
@@ -44,5 +45,55 @@
   </ol>
 </section>
 {{/if}}
+=======
+<div class="dash">
+  <section class="post user image section1">
+    <h3 class="meta input-color dashInputBig">Hello {{user.username}}!<br>What Exercise are you doing?</h3>
+
+    <form class="new-post-form ">
+      <div class="input-color">
+        <label class='input-color' for="post-title">Workout Name</label>
+        <input type="text" id="post-title" name="post-title" />
+      </div>
+      <h3 class="input-color dashInputBig">Please select your workout data, and use all that apply.</h3>
+      <div class="input-color">
+        <label class='input-color' for="post-distance">Distance (miles)</label>
+        <input type="number" value=0 id="post-distance" name="post-distance" />
+      </div>
+      <div class="input-color">
+        <label class='input-color' for="post-time">How Long in Time (minutes)?</label>
+        <input type="number" value=0  id="post-time" name="post-time" />
+      </div>
+      <div class="input-color">
+        <label class='input color' for="post-weight">How much weight (lbs)?</label>
+        <input type="number" value=0  id="post-weight" name="post-weight" />
+      </div>
+      <div class="input-color">
+        <label class='input-color' for="post-sets">How many sets?</label>
+        <input type="number" value=0  id="post-sets" name="post-sets" />
+      </div>
+      <div class="input-color">
+        <label class='input-color' for="post-reps">Reps</label>
+        <input type="number" value=0  id="post-reps" name="post-reps" />
+      </div>
+      <button type="submit" class="btn">Create</button>
+    </form>
+  </section>
+
+  {{#if posts.length}}
+  <section class="image2 section2">
+    <h2 class="input-color dashPostBig">Your Exercises</h2>
+    <ol class="input-color">
+      {{#each posts as |post|}}
+      <li>
+        {{> post-info post}}
+        <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
+      </li>
+      {{/each}}
+    </ol>
+  </section>
+  {{/if}}
+</div>
+>>>>>>> 84789b2fbb0d53edfb3ad78d88d842d978698bfb
 
 <script src="/javascript/add-post.js"></script>

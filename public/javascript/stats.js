@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 var options = {
   chart: {
     type: 'line'
@@ -16,6 +17,8 @@ var chart = new ApexCharts(document.querySelector("#chart"), options);
 
 chart.render();
 =======
+=======
+>>>>>>> 84789b2fbb0d53edfb3ad78d88d842d978698bfb
 console.log('loaded stats file');
 
 
@@ -59,5 +62,9 @@ console.log('loaded stats file');
 
 // var options = {
 
+<<<<<<< HEAD
+// }
+>>>>>>> 84789b2fbb0d53edfb3ad78d88d842d978698bfb
+=======
 // }
 >>>>>>> 84789b2fbb0d53edfb3ad78d88d842d978698bfb

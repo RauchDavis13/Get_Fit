@@ -1,12 +1,17 @@
 {{!-- {{> post-info post}} --}}
 
+<<<<<<< HEAD
 {{#if loggedIn}}
+=======
+
+>>>>>>> 84789b2fbb0d53edfb3ad78d88d842d978698bfb
 
   <div class="container">
     <div id="chart"></div>
   </div>
 
 
+<<<<<<< HEAD
 {{/if}}
 
 {{> comments post.comments}}
@@ -16,3 +21,57 @@
 <script src="/javascript/upvote.js"></script> --}}
 <script src="/javascript/stats.js"></script>
 {{/if}}
+=======
+{{!-- <script src="/javascript/comment.js"></script>
+<script src="/javascript/upvote.js"></script> --}}
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+<script>
+    console.log('loaded stats file');
+
+  let dates = ['2022-02-03 01:30:07','2022-02-04 01:30:07','2022-02-05 01:30:07','2022-02-06 01:30:07','2022-02-07 01:30:07','2022-02-08 01:30:07','2022-02-09 01:30:07'];
+  let reps = [20,20,35,20,25,25,25,];
+  let sets = [3,3,3,2,5,5,5];
+
+  // Chart Options
+
+
+  
+  const options = {
+    chart: {
+      type: 'line',
+      height: 450,
+      width: '80%',
+      
+    },
+    series: [
+      {
+      name: 'sets',
+      data: sets
+
+      },
+      {
+        name: 'reps',
+        data: reps
+      }
+    ],
+    xaxis: {
+      
+    data: dates
+    // plotOptions: {
+    //   bar: {
+    }
+
+  };
+
+
+  // Init chart
+  const chart = new ApexCharts(document.querySelector('#chart'), options);
+
+  // Render Chart
+  chart.render();
+</script>
+
+<script src="/javascript/stats.js"></script>
+
+>>>>>>> 84789b2fbb0d53edfb3ad78d88d842d978698bfb

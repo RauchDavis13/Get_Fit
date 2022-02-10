@@ -90,7 +90,17 @@ header {
 }
 
 header h1 {
+<<<<<<< HEAD
   font-size: 40px;
+=======
+  font-size: 1em;
+  color: white;
+}
+
+header h1 a {
+  
+  color: white;
+>>>>>>> 84789b2fbb0d53edfb3ad78d88d842d978698bfb
 }
 
 main {
@@ -219,7 +229,11 @@ footer {
 }
 
 nav a {
+<<<<<<< HEAD
   background-color: #225ca3;
+=======
+  background-color: rgb(238, 138, 56);
+>>>>>>> 84789b2fbb0d53edfb3ad78d88d842d978698bfb
   border: none;
   color: white;
   padding: 15px;
@@ -231,3 +245,48 @@ nav a {
   cursor: pointer;
   border-radius: 12px;
 }
+<<<<<<< HEAD
+=======
+
+.dash {
+
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;  
+}
+
+.dashInputBig {
+  justify-content: center;
+}
+
+.dashPostBig {
+  position: -webkit-sticky;
+}
+
+.section1 {
+  left: 12%;
+  position: fixed;
+}
+
+.section2 {
+  width: 75%;
+  right: 0;
+  margin: auto auto 0 auto;;
+}
+
+.homepage {
+  background: url('../images/rockcartoon.jpg') no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+.title {
+  color: white;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: bold;
+}
+
+
+
+>>>>>>> 84789b2fbb0d53edfb3ad78d88d842d978698bfb

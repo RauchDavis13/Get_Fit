@@ -17,7 +17,7 @@ async function chartFormHandler(event) {
     window.location.toString().split('/').length - 1
   ];
   const response = await fetch(`/api/posts/${id}`, {
-    method: 'PUT',
+    method: 'GET',
     body: JSON.stringify({
       title,
       distance,

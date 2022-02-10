@@ -27,3 +27,14 @@ technology that we haven’t discussed in this course into your application
 ## Website
 
 ## Screenshots
+<img width="1209" alt="Screen Shot 2022-02-10 at 12 35 38 AM" src="https://user-images.githubusercontent.com/91897531/153500110-d5b312af-9585-4256-bb16-108d9e2456f7.png">
+
+<img width="1204" alt="Screen Shot 2022-02-10 at 12 36 02 AM" src="https://user-images.githubusercontent.com/91897531/153500134-cf687342-e262-4694-a4d6-694f4ced2727.png">
+
+<img width="1197" alt="Screen Shot 2022-02-10 at 12 36 31 AM" src="https://user-images.githubusercontent.com/91897531/153500160-092ad4eb-0abd-48b7-939e-83e05651b92c.png">
+
+<img width="1192" alt="Screen Shot 2022-02-10 at 12 37 02 AM" src="https://user-images.githubusercontent.com/91897531/153500168-add8269a-3aae-43b9-b3de-9b897dcfc5a4.png">
+
+<img width="1180" alt="Screen Shot 2022-02-10 at 12 37 27 AM" src="https://user-images.githubusercontent.com/91897531/153500183-4686da80-3bf9-4008-ad49-f2217eb6392a.png">
+
+<img width="1190" alt="Screen Shot 2022-02-10 at 12 38 13 AM" src="https://user-images.githubusercontent.com/91897531/153500198-20ed675c-b166-436a-bbce-55fa545cbd3e.png">

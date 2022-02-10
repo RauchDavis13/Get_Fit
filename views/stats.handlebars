@@ -12,43 +12,50 @@
 <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 
 <script>
-  console.log('loaded stats file');
+    console.log('loaded stats file');
+
+  let dates = ['2022-02-03 01:30:07','2022-02-04 01:30:07','2022-02-05 01:30:07','2022-02-06 01:30:07','2022-02-07 01:30:07','2022-02-08 01:30:07','2022-02-09 01:30:07'];
+  let reps = [20,20,35,20,25,25,25,];
+  let sets = [3,3,3,2,5,5,5];
+
+  // Chart Options
 
 
-
-
-
-// Chart Options
-
-const options = {
-  chart: {
-    type: 'line',
-    height: 450,
-    width: '80%',
-    
-  },
-  series: [
-    {
-    name: 'sets',
-    data: {{JSON.stringify(sets)}}
+  
+  const options = {
+    chart: {
+      type: 'line',
+      height: 450,
+      width: '80%',
+      
     },
-    {
-      name: 'reps',
-      data: {{JSON.stringify(reps)}}
+    series: [
+      {
+      name: 'sets',
+      data: sets
+
+      },
+      {
+        name: 'reps',
+        data: reps
+      }
+    ],
+    xaxis: {
+      
+    data: dates
+    // plotOptions: {
+    //   bar: {
     }
-  ],
-  xaxis: {
-    categories: data: {{JSON.stringify({{dates)}}
-  // plotOptions: {
-  //   bar: {
 
-};
+  };
 
 
-// Init chart
-const chart = new ApexCharts(document.querySelector('#chart'), options);
+  // Init chart
+  const chart = new ApexCharts(document.querySelector('#chart'), options);
 
-// Render Chart
-chart.render();
+  // Render Chart
+  chart.render();
 </script>
+
+<script src="/javascript/stats.js"></script>
 

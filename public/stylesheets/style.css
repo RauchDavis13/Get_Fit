@@ -76,12 +76,12 @@ form label {
 }
 
 header {
-  background-color: rgb(228, 228, 228);
+  background-color: rgb(0, 0, 0);
   border-bottom: 1px solid #ccc;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  display: flex;
+  display: flex; 
   justify-content: space-between;
   flex-wrap: wrap;
   align-items: center;
@@ -91,6 +91,12 @@ header {
 
 header h1 {
   font-size: 1em;
+  color: white;
+}
+
+header h1 a {
+  
+  color: white;
 }
 
 main {
@@ -99,16 +105,17 @@ main {
 }
 
 .btn-no-style {
-  background: none;
+  background-color: #225ca3;
   border: none;
-  padding: 0;
-  cursor: pointer;
+  color: white;
+  padding: 15px;
+  text-align: center;
   text-decoration: none;
-  color: #225ca3;
-  font-size: 100%;
-  font-weight: bold;
-  transition: color .1s;
-  margin-left: 16px;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
 }
 
 .btn-no-style:hover {
@@ -218,7 +225,7 @@ footer {
 }
 
 nav a {
-  background-color: #225ca3;
+  background-color: rgb(238, 138, 56);
   border: none;
   color: white;
   padding: 15px;
@@ -232,9 +239,9 @@ nav a {
 }
 
 .dash {
-  grid-auto-columns: auto;
+
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-direction: row;  
 }
 
@@ -252,6 +259,23 @@ nav a {
 }
 
 .section2 {
+  width: 75%;
   right: 0;
   margin: auto auto 0 auto;;
 }
+
+.homepage {
+  background: url('../images/rockcartoon.jpg') no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+.title {
+  color: white;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: bold;
+}
+
+
+

@@ -23,8 +23,7 @@
 .login-container form{
     padding: 10%;
 }
-.btnSubmit
-{
+.btnSubmit {
     width: 50%;
     border-radius: 1rem;
     padding: 1.5%;
@@ -41,6 +40,3 @@
     color: black;
     background-color: #fff;
 }
-/* .loginpg {
-    background-image: url("/images/weights.jpg");
-} */

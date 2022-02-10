@@ -1,3 +1,9 @@
+:root {
+  --primary-color: rgb(238, 138, 56);
+  --secondary-color: #007bff;
+  --tertiary-color: #0099ff;
+
+}
 * {
   box-sizing: border-box;
 }
@@ -77,8 +83,6 @@ form label {
 
 header {
   border-bottom: 1px solid #ccc;
-  /* position: -webkit-sticky;
-  position: sticky; */
   top: 0;
   display: flex;
   justify-content: space-between;
@@ -187,9 +191,7 @@ footer {
 }
 
 .image {
-  
   background-image: url('../images/workout2.jpg');
-  /* background: rgba(178, 180, 178, 0.3); */
   background-repeat: no-repeat;
   background-position: right;
   background-attachment: local;
@@ -197,9 +199,6 @@ footer {
 }
 
 .image2 {
-  
-  background-image: url('../images/workout1.jpg');
-  /* background: rgba(178, 180, 178, 0.3); */
   background-repeat: no-repeat;
   background-position: top;
   background-attachment: fixed;
@@ -226,19 +225,4 @@ nav a {
   margin: 4px 2px;
   cursor: pointer;
   border-radius: 12px;
-}
-
-/* homepage design */
-.homepage {
-  background: url('/images/rockcartoon.jpg') no-repeat center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
-}
-
-.title {
-  color: white;
-  font-family: fantasy;
-  font-weight: bold;
 }

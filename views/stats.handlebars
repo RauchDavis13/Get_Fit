@@ -1,0 +1,18 @@
+{{!-- {{> post-info post}} --}}
+
+{{#if loggedIn}}
+
+  <div class="container">
+    <div id="chart"></div>
+  </div>
+
+
+{{/if}}
+
+{{> comments post.comments}}
+
+{{#if loggedIn}}
+{{!-- <script src="/javascript/comment.js"></script>
+<script src="/javascript/upvote.js"></script> --}}
+<script src="/javascript/stats.js"></script>
+{{/if}}

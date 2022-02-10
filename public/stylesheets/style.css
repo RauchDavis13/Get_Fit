@@ -68,19 +68,25 @@ form label {
 .wrapper {
   width: 100%;
   min-height: 100%;
-  max-width: 1200px;
+  max-width: 85%; 
   margin: 0 auto;
   display: flex;
+  justify-content: center;
   flex-direction: column;
 }
 
 header {
+  background-color: rgb(228, 228, 228);
   border-bottom: 1px solid #ccc;
-  /* position: inherit; */
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   align-items: center;
   padding: 0 1%;
+  z-index: 9999;
 }
 
 header h1 {
@@ -93,16 +99,17 @@ main {
 }
 
 .btn-no-style {
-  background: none;
+  background-color: #225ca3;
   border: none;
-  padding: 0;
-  cursor: pointer;
+  color: white;
+  padding: 15px;
+  text-align: center;
   text-decoration: none;
-  color: #225ca3;
-  font-size: 100%;
-  font-weight: bold;
-  transition: color .1s;
-  margin-left: 16px;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
 }
 
 .btn-no-style:hover {
@@ -184,17 +191,30 @@ footer {
 
 .image {
   
-  background-image: url('../images/workout1.jpg');
+  background-image: url('../images/workout2.jpg');
   /* background: rgba(178, 180, 178, 0.3); */
   background-repeat: no-repeat;
   background-position: right;
+  background-attachment: local;
+  background-size: cover;
+}
+
+.image2 {
+  
+  background-image: url('../images/workout1.jpg');
+  /* background: rgba(178, 180, 178, 0.3); */
+  background-repeat: no-repeat;
+  background-position: top;
   background-attachment: fixed;
-  background-size: contain;
+  background-size: auto;
 }
 
 .input-color {
+  width: 300px;
   color: black;
-  text-shadow: 2px, 2px, white, ;
+  background-color: white;
+  background: rgba(253, 253, 253, 0.65)
+
   
 }
 
@@ -210,4 +230,29 @@ nav a {
   margin: 4px 2px;
   cursor: pointer;
   border-radius: 12px;
+}
+
+.dash {
+  grid-auto-columns: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;  
+}
+
+.dashInputBig {
+  justify-content: center;
+}
+
+.dashPostBig {
+  position: -webkit-sticky;
+}
+
+.section1 {
+  left: 12%;
+  position: fixed;
+}
+
+.section2 {
+  right: 0;
+  margin: auto auto 0 auto;;
 }

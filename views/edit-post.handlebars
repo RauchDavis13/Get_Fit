@@ -1,55 +1,59 @@
-<article>
-  <a href="/dashboard"> &larr; Back to dashboard</a>
-  <h2>
-    Edit Workout
-  </h2>
-  <form class="edit-post-form">
-    <div>
-      <div>
-        <label for="post-title">Workout Name</label>
-        <input name="post-title" type="text" value="{{post.title}}" />
+<link rel="stylesheet" href="/stylesheets/dashboard.css">
+<main class="edit">
+  <div class="container criteria">
+    <div class="row">
+      <div class="col-md-6 crit-form">
+        <a href="/dashboard"> &larr; Back to dashboard</a>
+        <h2>Edit Workout</h2>
+        <form class="edit-post-form">
+          <div>
+            <label for="post-title">Workout Name</label>
+            <input name="post-title" type="text" value="{{post.title}}" />
+          </div>
+          <div>
+            <label for="post-distance">Distance (miles)</label>
+            <input name="post-distance" type="number" value="{{post.distance}}" />
+          </div>
+          <div>
+            <label for="post-time">How Long in Time (minutes)?</label>
+            <input name="post-time" type="number" value="{{post.time}}" />
+          </div>
+          <div>
+            <label for="post-weight">How much weight (lbs)?</label>
+            <input name="post-weight" type="number" value="{{post.weight}}" />
+          </div>
+          <div>
+            <label for="post-sets">How many sets?</label>
+            <input name="post-sets" type="number" value="{{post.sets}}" />
+          </div>
+          <div>
+            <label for="post-reps">Reps</label>
+            <input name="post-reps" type="number" value="{{post.reps}}" />
+          </div>
+          <div>
+            {{post.vote_count}} {{format_plural "point" post.vote_count}} by you on {{format_date post.created_at}}
+            |
+            <a href="/post/{{post.id}}">{{post.comments.length}} {{format_plural "comment" post.comments.length}}</a>
+          </div>
+          <button type="submit">Save workout</button>
+          <button type="button" class="delete-post-btn">Delete workout</button>
+        </form>
       </div>
-      <div>
-        <label for="post-distance">Distance (miles)</label>
-        <input name="post-distance" type="number" value="{{post.distance}}" />
-      </div>
-      <div>
-        <label for="post-time">How Long in Time (minutes)?</label>
-        <input name="post-time" type="number" value="{{post.time}}" />
-      </div>
-      <div>
-        <label for="post-weight">How much weight (lbs)?</label>
-        <input name="post-weight" type="number" value="{{post.weight}}" />
-      </div>
-      <div>
-        <label for="post-sets">How many sets?</label>
-        <input name="post-sets" type="number" value="{{post.sets}}" />
-      </div>
-      <div>
-        <label for="post-reps">Reps</label>
-        <input name="post-reps" type="number" value="{{post.reps}}" />
-      {{!-- <span>({{format_url post.post_url}})</span> --}}
+
+      <div class="col-md-6 results ">
+        <form class="comment-form">
+          <div>
+            <textarea name="comment-body"></textarea>
+          </div>
+
+          <div>
+            <button type="submit">add comment</button>
+          </div>
+        </form>
       </div>
     </div>
-    <div>
-      {{post.vote_count}} {{format_plural "point" post.vote_count}} by you on {{format_date post.created_at}}
-      |
-      <a href="/post/{{post.id}}">{{post.comments.length}} {{format_plural "comment" post.comments.length}}</a>
-    </div>
-    <button type="submit">Save workout</button>
-    <button type="button" class="delete-post-btn">Delete workout</button>
-  </form>
-</article>
-
-<form class="comment-form">
-  <div>
-    <textarea name="comment-body"></textarea>
   </div>
-
-  <div>
-    <button type="submit">add comment</button>
-  </div>
-</form>
+</main>
 
 {{> comments post.comments}}
 

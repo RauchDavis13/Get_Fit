@@ -1,7 +1,6 @@
 const router = require('express').Router();
 const sequelize = require('../config/connection');
 const { Post, User, Comment, Vote } = require('../models');
-
 // get all posts for homepage
 router.get('/', (req, res) => {
   console.log('========= HOME PAGE ROUTE =============');
@@ -35,7 +34,6 @@ router.get('/', (req, res) => {
   })
     .then(dbPostData => {
       const posts = dbPostData.map(post => post.get({ plain: true }));
-
       res.render('homepage', {
         posts,
         loggedIn: req.session.loggedIn
@@ -46,7 +44,6 @@ router.get('/', (req, res) => {
       res.status(500).json(err);
     });
 });
-
 // get single post
 router.get('/post/:id', (req, res) => {
   Post.findOne({
@@ -79,9 +76,7 @@ router.get('/post/:id', (req, res) => {
         res.status(404).json({ message: 'No post found with this id' });
         return;
       }
-
       const post = dbPostData.get({ plain: true });
-
       res.render('single-post', {
         post,
         loggedIn: req.session.loggedIn
@@ -92,14 +87,11 @@ router.get('/post/:id', (req, res) => {
       res.status(500).json(err);
     });
 });
-
 router.get('/login', (req, res) => {
   if (req.session.loggedIn) {
     res.redirect('/');
     return;
   }
-
   res.render('login');
 });
-
 module.exports = router;

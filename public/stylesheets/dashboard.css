@@ -1,0 +1,21 @@
+.criteria{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    font-family: fantasy;
+}
+.crit-form{
+    padding: 0%;
+}
+
+.results {
+    padding: 5%;
+} 
+.crit-form form{
+    padding: 3%;
+}
+
+.new-post-form {
+    position: fixed;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+
+}

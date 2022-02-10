@@ -29,7 +29,7 @@ a:hover {
 }
 
 button {
-  background-color: #225ca3;
+  background-color: black;
   border: 0;
   padding: 1%;
   color: white;
@@ -40,7 +40,7 @@ button {
 }
 
 button:hover {
-  background-color: #3486eb;
+  background-color: red;
 }
 
 .post-list {
@@ -83,7 +83,7 @@ form label {
 }
 
 header {
-  background-color: rgb(0, 0, 0);
+  background-color: rgba(36, 31, 31, 0.123);
   border-bottom: 1px solid #ccc;
   top: 0;
   display: flex;
@@ -112,7 +112,7 @@ main {
 }
 
 .btn-no-style {
-  background-color: #225ca3;
+  background-color: rgb(228, 61, 39);
   border: none;
   color: white;
   padding: 15px;
@@ -127,7 +127,7 @@ main {
 
 .btn-no-style:hover {
   background: none;
-  color: #3486eb;
+  background-color: red;
 }
 
 .delete-post-btn {
@@ -202,20 +202,20 @@ footer {
   font-style: italic;
 }
 
-.image {
+/* .image {
   background-image: url('../images/workout2.jpg');
   background-repeat: no-repeat;
   background-position: right;
   background-attachment: local;
   background-size: cover;
-}
+} */
 
-.image2 {
+/* .image2 {
   background-repeat: no-repeat;
   background-position: top;
   background-attachment: fixed;
   background-size: auto;
-}
+} */
 
 .input-color {
   width: 300px;

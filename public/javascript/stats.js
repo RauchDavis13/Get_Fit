@@ -1,44 +1,41 @@
-console.log('loaded stats file');
+console.log('----- stats javascript file -----');
 
 
+async function chartFormHandler(event) {
+  event.preventDefault();
 
+  console.log('----------- chart_post.js ----------')
 
+  const title = document.querySelector('input[name="post-title"]').value.trim();
+  const distance = document.querySelector('input[name="post-distance"]').value.trim();
+  const time = document.querySelector('input[name="post-time"]').value.trim();
+  const weight = document.querySelector('input[name="post-weight"]').value.trim();
+  const sets = document.querySelector('input[name="post-sets"]').value.trim();
+  const reps = document.querySelector('input[name="post-reps"]').value.trim();
 
-// Chart Options
+  const id = window.location.toString().split('/')[
+    window.location.toString().split('/').length - 1
+  ];
+  const response = await fetch(`/api/posts/${id}`, {
+    method: 'PUT',
+    body: JSON.stringify({
+      title,
+      distance,
+      time,
+      weight,
+      sets,
+      reps
+    }),
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  });
 
-// const options = {
-//   chart: {
-//     type: 'line',
-//     height: 450,
-//     width: '80%',
-    
-//   },
-//   series: [
-//     {
-//     name: 'sets',
-//     data: [4,5]
-//     },
-//     {
-//       name: 'reps',
-//       data: [24,23]
-//     }
-//   ],
-//   xaxis: {
-//     categories: ['2022-02-07 23:03:57', '2022-02-08 01:30:07']
-//   }
-//   // plotOptions: {
-//   //   bar: {
+  if (response.ok) {
+    document.location.replace('/stats/');
+  } else {
+    alert(response.statusText);
+  }
+}
 
-// };
-
-
-// // Init chart
-// const chart = new ApexCharts(document.querySelector('#chart'), options);
-
-// // Render Chart
-// chart.render();
-
-
-// var options = {
-
-// }
+document.querySelector('.chartLink').addEventListener('submit', chartFormHandler);

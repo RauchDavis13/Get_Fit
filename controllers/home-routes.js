@@ -1,6 +1,9 @@
 const router = require('express').Router();
+const session = require('express-session');
 const sequelize = require('../config/connection');
 const { Post, User, Comment, Vote } = require('../models');
+const withAuth = require('../utils/auth');
+
 // get all posts for homepage
 router.get('/', (req, res) => {
   console.log('========= HOME PAGE ROUTE =============');
@@ -94,4 +97,57 @@ router.get('/login', (req, res) => {
   }
   res.render('login');
 });
+
+router.get('/stats', withAuth, (req, res) => {
+  Post.findAll({
+    // where: {
+    //   id: req.params.id,
+    //   user: req.session.user.id
+    // },
+    attributes: [
+      'id',
+      'title',
+      'distance',
+      'time',
+      'weight',
+      'sets',
+      'reps',
+      'created_at',
+      'updated_at',
+      [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
+    ],
+    include: [
+      // {
+      //   model: Comment,
+      //   attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
+      //   include: {
+      //     model: User,
+      //     attributes: ['username']
+      //   }
+      // },
+      {
+        model: User,
+        attributes: ['username']
+      }
+    ]
+  })
+  .then(dbChartData => {
+    const posts = dbChartData.map(post => post.get({ plain: true }));
+    console.log('------ Chart Route ----');
+    res.render('stats', {
+      posts,
+      loggedIn: req.session.loggedIn
+    });
+  })
+  .catch(err => {
+    console.log(err);
+    res.status(500).json(err);
+  });
+
+
+  
+});
+
+
+
 module.exports = router;

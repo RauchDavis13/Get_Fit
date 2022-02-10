@@ -1,0 +1,17 @@
+/* homepage design */
+.homepage {
+    background: url('/images/rockcartoon.jpg') no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+  }
+  
+  .title {
+    padding-top: 5%;
+    color: white;
+    font-family: fantasy;
+    font-weight: bold;
+    text-shadow: -2px 2px #ff0000;
+  }
+  

@@ -112,24 +112,14 @@ main {
 }
 
 .btn-no-style {
-  background-color: rgb(228, 61, 39);
   border: none;
   color: white;
-  padding: 15px;
-  text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin: 4px 2px;
   cursor: pointer;
   border-radius: 12px;
 }
-
-.btn-no-style:hover {
-  background: none;
-  background-color: red;
-}
-
 .delete-post-btn {
   background-color: #d41414;
 }
@@ -201,22 +191,6 @@ footer {
 .exercise-criteria {
   font-style: italic;
 }
-
-/* .image {
-  background-image: url('../images/workout2.jpg');
-  background-repeat: no-repeat;
-  background-position: right;
-  background-attachment: local;
-  background-size: cover;
-} */
-
-/* .image2 {
-  background-repeat: no-repeat;
-  background-position: top;
-  background-attachment: fixed;
-  background-size: auto;
-} */
-
 .input-color {
   width: 300px;
   color: black;
@@ -237,4 +211,10 @@ nav a {
   margin: 4px 2px;
   cursor: pointer;
   border-radius: 12px;
+}
+nav {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }

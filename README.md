@@ -25,6 +25,9 @@ technology that we haven’t discussed in this course into your application
 * ApexCharts.js
 
 ## Website
+* Heroku: https://damp-reef-46989.herokuapp.com/
+
+* Github Repository: https://github.com/RauchDavis13/Get_Fit
 
 ## Screenshots
 <img width="1209" alt="Screen Shot 2022-02-10 at 12 35 38 AM" src="https://user-images.githubusercontent.com/91897531/153500110-d5b312af-9585-4256-bb16-108d9e2456f7.png">
